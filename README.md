@@ -7,4 +7,4 @@ https://doi.org/10.1038/s41597-020-00600-4
 
 Original Code: https://github.com/celsohlsj/gee_brazil_sv/blob/master/gee_brazil_sv_toolkit_download.js
 
-Google Earth Engine code: https://code.earthengine.google.com/9a1f982790783fb4bd6c1a80f62c3970
+Google Earth Engine code: https://code.earthengine.google.com/8ec0e377bc384438b092149376bd33f5

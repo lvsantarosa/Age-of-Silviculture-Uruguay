@@ -1,8 +1,8 @@
 //Original Code: https://github.com/celsohlsj/gee_brazil_sv/blob/master/gee_brazil_sv_toolkit_download.js
 
-//Google Earth Engine code: https://code.earthengine.google.com/9a1f982790783fb4bd6c1a80f62c3970
+//Google Earth Engine code: https://code.earthengine.google.com/8ec0e377bc384438b092149376bd33f5
 
-// Silviculture age for Uruguay - Mapbiomas Pampa v1
+// Silviculture age for Uruguay - Mapbiomas Pampa v2
 // 
 // ******************************************************************************************
 //  * Institution:  Sao Paulo State University 
@@ -12,14 +12,14 @@
 //  * Adapted from Silva Junior et al. 2020
 // ******************************************************************************************
 
-// 0. MapBiomas Data (Colection 1.0)
+// 0. MapBiomas Data (Colection 2.0)
 var UY =  ee.FeatureCollection('projects/ee-lucassantarosa2/assets/UY');
-var mapbiomas = ee.Image('projects/MapBiomas_Pampa/public/collection1/mapbiomas_pampa_collection1_integration_v1').byte(); 
+var mapbiomas = ee.Image('projects/MapBiomas_Pampa/public/collection2/mapbiomas_pampa_collection2_integration_v1').byte(); 
 
 // 1. Reclassifying MapBiomas Data #Step 1
 var empty = ee.Image().byte();
 
-for (var i=1; i<20; i++)  {
+for (var i=1; i<22; i++)  {
     var y = 2000+i;
     var year = 'classification_'+y;
     var forest = mapbiomas.select(year).eq(9);//Code for silviculture 
@@ -29,7 +29,7 @@ var mapbiomas_forest = empty.select(empty.bandNames().slice(1));
 
 // 1.1 Other uses and Water Mask
 var empty = ee.Image().byte();
-for (var i=1; i<20; i++)  {
+for (var i=1; i<22; i++)  {
     var y = 2000+i;
     var year = 'classification_'+y;
     var forest = mapbiomas.select(year).remap([01,02,03,04,10,11,12,14,22,26,27,33],[1,1,1,1,1,1,1,1,1,1,1,1]).rename(ee.String(year)).unmask(0);
@@ -41,7 +41,7 @@ var w_mask = ee.Image("JRC/GSW1_3/GlobalSurfaceWater").select("max_extent").clip
 
 // 2. Mapping the Annual Increment  #Step 2
 var empty = ee.Image().byte();
-for (var i=0; i<18; i++)  {
+for (var i=0; i<20; i++)  {
     var y1 = 2001+i;
     var y2 = 2002+i;
     var year1 = 'classification_'+y1;
@@ -60,7 +60,7 @@ var empty = ee.Image().byte();
 var ext = sforest_all.select('classification_2002');
 ext = ext.rename(ee.String('classification_2002'));
 empty = empty.addBands(ext);
-for (var i=1; i<18; i++)  {
+for (var i=1; i<20; i++)  {
     var y = 2002+i;
     var y2 = 2001+i;
     var year = 'classification_'+y;
@@ -80,7 +80,7 @@ var empty2 = ee.Image().byte();
 var ext = sforest_all.select('classification_2002');
 ext = ext.rename(ee.String('classification_2002'));
 empty = empty.addBands(ext);
-for (var i=1; i<18; i++)  {
+for (var i=1; i<20; i++)  {
     var y = 2002+i;
     var y2 = 2001+i;
     var year = 'classification_'+y;
@@ -104,7 +104,7 @@ age = age.rename(ee.String('classification_2002'));
 empty = empty.addBands(age);
 empty = empty.slice(1);
 var temp = empty;
-for (var i=1; i<18; i++)  {
+for (var i=1; i<20; i++)  {
     var y = 2002+i;
     var year = 'classification_'+y;
     var sforest = sforest_ext.select(year);
@@ -116,11 +116,14 @@ for (var i=1; i<18; i++)  {
 }
 var sforest_age = temp;
 
+print(sforest_age)
+
 //See the age of forestation 
 
-var class2019 = sforest_age.select('classification_2019')
+var class2021 = sforest_age.select('classification_2021')
 
-Map.addLayer(class2019)
+Map.addLayer(class2021)
+Map.centerObject(UY)
 
 // Export Products Data to Google Drive
 

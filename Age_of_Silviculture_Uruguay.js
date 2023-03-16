@@ -1,6 +1,7 @@
 //Original Code: https://github.com/celsohlsj/gee_brazil_sv/blob/master/gee_brazil_sv_toolkit_download.js
 
-//Google Earth Engine code: https://code.earthengine.google.com/8ec0e377bc384438b092149376bd33f5
+//Google Earth Engine code: https://code.earthengine.google.com/567f6bbb95866fc07c587849858767dc
+
 
 // Silviculture age for Uruguay - Mapbiomas Pampa v2
 // 

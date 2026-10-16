@@ -3,8 +3,10 @@ title: Age of Silviculture in Uruguay
 message: >-
   If you use this script or its derived products, please cite this
   repository together with the original method of Silva Junior et al.
-  (2020) and the MapBiomas Pampa dataset.
+  (2020) and the MapBiomas Uruguay Collection 3 dataset.
 type: software
+version: 2.0.0
+date-released: '2026-10-16'
 authors:
   - given-names: Lucas
     family-names: Vituri Santarosa
@@ -13,15 +15,18 @@ authors:
 abstract: >-
   Google Earth Engine script that maps the annual increment, extent,
   loss and age of silviculture (forest plantations) in Uruguay between
-  2001 and 2021, at 30 m resolution, from the MapBiomas Pampa
-  Collection 2.0 land-use classification. Adapted from the Brazilian
+  1985 and 2024, at 30 m resolution, from the MapBiomas Uruguay
+  Collection 3 land-use classification, separating Pinus (class 79)
+  and Eucalyptus (class 80) plantations. Adapted from the Brazilian
   secondary-forest-age toolkit of Silva Junior et al. (2020).
 keywords:
   - silviculture
   - forest plantations
   - Uruguay
+  - Pinus
+  - Eucalyptus
   - Pampa
-  - MapBiomas
+  - MapBiomas Uruguay
   - Google Earth Engine
   - remote sensing
   - land use change

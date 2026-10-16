@@ -148,7 +148,7 @@ each pixel carries the number of consecutive years it has been under silvicultur
 ## Usage
 
 1. Open the script directly in the Earth Engine Code Editor:
-   **https://code.earthengine.google.com/567f6bbb95866fc07c587849858767dc**
+   **[https://code.earthengine.google.com/567f6bbb95866fc07c587849858767dc](https://code.earthengine.google.com/bcbaf15252a69465cdc4f178fde4414d)**
    (or copy `Age_of_Silviculture_Uruguay.js` into a new script).
 2. Make sure you have access to a Uruguay boundary asset (edit `AOI` if needed). The MapBiomas
    Uruguay Collection 3 asset is public.

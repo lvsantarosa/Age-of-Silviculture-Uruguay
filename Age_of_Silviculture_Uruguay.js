@@ -11,7 +11,7 @@
 //  * Purpose:      Map the increment, extent, age and loss of silviculture in Uruguay,
 //  *               separating Pinus and Eucalyptus plantations
 //  * Author:       Lucas Vituri Santarosa
-//  * Email:        lucas.santarosa@unesp.br
+//  * Email:        lucas.vituri@pucv.cl
 //  * Adapted from: Silva Junior et al. 2020 (https://doi.org/10.1038/s41597-020-00600-4)
 //  * Data:         MapBiomas Uruguay Collection 3 (1985-2024)
 //  * Updated:      2026

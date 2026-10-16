@@ -232,4 +232,4 @@ If you use this script or its products, please cite both the original method and
 Laboratorio de Recursos Hídricos y Geotecnologías (LRHG)
 Escuela de Agronomía · Facultad de Ciencias Agronómicas y de los Alimentos
 Pontificia Universidad Católica de Valparaíso (PUCV)
-📧 lucas.santarosa@unesp.br
+📧 lucas.vituri@pucv.cl

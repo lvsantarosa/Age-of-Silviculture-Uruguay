@@ -12,8 +12,8 @@
 //  * Author:       Lucas Vituri Santarosa
 //  * Email:        lucas.santarosa@unesp.br
 //  * Adapted from: Silva Junior et al. 2020 (https://doi.org/10.1038/s41597-020-00600-4)
-//  * Updated:      2026 - migrated from MapBiomas Pampa Collection 2 to
-//  *               MapBiomas Uruguay Collection 3 (1985-2024)
+//  * Data:         MapBiomas Uruguay Collection 3 (1985-2024)
+//  * Updated:      2026
 // ******************************************************************************************
 
 
@@ -45,8 +45,7 @@ var ASSET_FOLDER = 'projects/ee-lucassantarosa2/assets';  // destination for toA
 var EXPORT_SPECIES = true;    // export Pinus/Eucalyptus products in addition to all silviculture
 
 // --- MapBiomas Uruguay Collection 3 legend ------------------------------------------------
-// Collection 3 replaced the single silviculture class (9, used up to Collection 2) by
-// three forest plantation classes:
+// Collection 3 maps forest plantations by genus, in three classes:
 //     79 - Pinus plantation          (#67671c)
 //     80 - Eucalyptus plantation     (#886827)
 //     83 - Other forestry uses       (#ab8231)
@@ -80,6 +79,9 @@ var TARGETS = {
 // ==========================================================================================
 
 var mapbiomas = ee.Image(COLLECTION).byte();
+
+// Sanity check on the first run: the Console should list classification_1985 ... _2024.
+print('Collection bands', mapbiomas.bandNames());
 
 // List of years as a plain JavaScript array, so the loops below stay client-side.
 var years = [];

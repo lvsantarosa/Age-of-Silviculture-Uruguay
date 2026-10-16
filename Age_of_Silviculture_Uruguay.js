@@ -6,7 +6,8 @@
 // Silviculture increment, extent, loss and age for Uruguay - MapBiomas Uruguay Collection 3
 //
 // ******************************************************************************************
-//  * Institution:  Sao Paulo State University
+//  * Laboratory:   Laboratorio de Recursos Hidricos y Geotecnologias (LRHG)
+//  * Institution:  Escuela de Agronomia - Pontificia Universidad Catolica de Valparaiso
 //  * Purpose:      Map the increment, extent, age and loss of silviculture in Uruguay,
 //  *               separating Pinus and Eucalyptus plantations
 //  * Author:       Lucas Vituri Santarosa

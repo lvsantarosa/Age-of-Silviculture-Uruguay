@@ -11,7 +11,10 @@ authors:
   - given-names: Lucas
     family-names: Vituri Santarosa
     email: lucas.santarosa@unesp.br
-    affiliation: Sao Paulo State University (UNESP)
+    affiliation: >-
+      Laboratorio de Recursos Hidricos y Geotecnologias (LRHG),
+      Escuela de Agronomia, Pontificia Universidad Catolica de
+      Valparaiso (PUCV)
 abstract: >-
   Google Earth Engine script that maps the annual increment, extent,
   loss and age of silviculture (forest plantations) in Uruguay between

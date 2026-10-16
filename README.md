@@ -203,8 +203,9 @@ If you use this script or its products, please cite both the original method and
 
 **This adaptation**
 
-> Santarosa, L.V. *Age of Silviculture in Uruguay* (2026) — Google Earth Engine script adapted
-> from Silva Junior et al. (2020) for MapBiomas Uruguay Collection 3.
+> Santarosa, L.V. (2026). *Age of Silviculture in Uruguay* — Google Earth Engine script adapted
+> from Silva Junior et al. (2020) for MapBiomas Uruguay Collection 3. Laboratorio de Recursos
+> Hídricos y Geotecnologías, Escuela de Agronomía, Pontificia Universidad Católica de Valparaíso.
 > https://github.com/lvsantarosa/Age-of-Silviculture-Uruguay
 
 **Data**
@@ -227,5 +228,8 @@ If you use this script or its products, please cite both the original method and
 
 ## Author
 
-**Lucas Vituri Santarosa** — São Paulo State University (UNESP)
+**Lucas Vituri Santarosa**
+Laboratorio de Recursos Hídricos y Geotecnologías (LRHG)
+Escuela de Agronomía · Facultad de Ciencias Agronómicas y de los Alimentos
+Pontificia Universidad Católica de Valparaíso (PUCV)
 📧 lucas.santarosa@unesp.br

@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+title: Age of Silviculture in Uruguay
+message: >-
+  If you use this script or its derived products, please cite this
+  repository together with the original method of Silva Junior et al.
+  (2020) and the MapBiomas Pampa dataset.
+type: software
+authors:
+  - given-names: Lucas
+    family-names: Vituri Santarosa
+    email: lucas.santarosa@unesp.br
+    affiliation: Sao Paulo State University (UNESP)
+abstract: >-
+  Google Earth Engine script that maps the annual increment, extent,
+  loss and age of silviculture (forest plantations) in Uruguay between
+  2001 and 2021, at 30 m resolution, from the MapBiomas Pampa
+  Collection 2.0 land-use classification. Adapted from the Brazilian
+  secondary-forest-age toolkit of Silva Junior et al. (2020).
+keywords:
+  - silviculture
+  - forest plantations
+  - Uruguay
+  - Pampa
+  - MapBiomas
+  - Google Earth Engine
+  - remote sensing
+  - land use change
+repository-code: https://github.com/lvsantarosa/Age-of-Silviculture-Uruguay
+references:
+  - type: article
+    title: Benchmark maps of 33 years of secondary forest age for Brazil
+    authors:
+      - given-names: Celso H. L.
+        family-names: Silva Junior
+      - given-names: Viola H. A.
+        family-names: Heinrich
+      - given-names: Ana T. G.
+        family-names: Freire
+    journal: Scientific Data
+    volume: 7
+    year: 2020
+    doi: 10.1038/s41597-020-00600-4

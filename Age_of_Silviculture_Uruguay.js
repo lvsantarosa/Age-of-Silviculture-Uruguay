@@ -119,12 +119,46 @@ var sforest_age = temp;
 
 print(sforest_age)
 
-//See the age of forestation 
+// 5. Visualization: plantation age at the end of the series
 
-var class2021 = sforest_age.select('classification_2021')
+var ageVis = {
+  min: 1,
+  max: 20,
+  palette: ['#ffffcc', '#c2e699', '#78c679', '#31a354', '#006837'] // young -> old
+};
 
-Map.addLayer(class2021)
-Map.centerObject(UY)
+var class2021 = sforest_age.select('classification_2021').selfMask();
+
+Map.centerObject(UY, 6);
+Map.addLayer(UY.style({color: '000000', fillColor: '00000000', width: 1}), {}, 'Uruguay');
+Map.addLayer(class2021, ageVis, 'Silviculture age (2021, years)');
+
+// Simple legend for the age palette
+var legend = ui.Panel({style: {position: 'bottom-left', padding: '8px 10px'}});
+legend.add(ui.Label('Silviculture age in 2021 (years)',
+                    {fontWeight: 'bold', fontSize: '13px', margin: '0 0 6px 0'}));
+
+var legendRow = function(color, label) {
+  return ui.Panel({
+    widgets: [
+      ui.Label('', {backgroundColor: color, padding: '8px', margin: '0 6px 4px 0'}),
+      ui.Label(label, {margin: '0 0 4px 0', fontSize: '12px'})
+    ],
+    layout: ui.Panel.Layout.Flow('horizontal')
+  });
+};
+
+var legendClasses = [
+  ['#ffffcc', '1 - 4'],
+  ['#c2e699', '5 - 8'],
+  ['#78c679', '9 - 12'],
+  ['#31a354', '13 - 16'],
+  ['#006837', '17 - 20']
+];
+for (var j = 0; j < legendClasses.length; j++) {
+  legend.add(legendRow(legendClasses[j][0], legendClasses[j][1]));
+}
+Map.add(legend);
 
 // Export Products Data to Google Drive
 

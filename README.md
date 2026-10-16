@@ -34,24 +34,21 @@ Each product is generated three times: for **all plantations**, for **Pinus only
 
 ---
 
-## What changed in 2026 (MapBiomas Uruguay Collection 3)
+## Data: MapBiomas Uruguay Collection 3
 
-The script previously read **MapBiomas Pampa Collection 2**, where all plantations were a single
-class (`9`, *silvicultura*) and the series ran from 2001 to 2021. It now reads the dedicated
-**MapBiomas Uruguay Collection 3** (released November 2025), which changes three things:
+The script reads [MapBiomas Uruguay](https://uruguay.mapbiomas.org) **Collection 3** (released
+November 2025), the collection dedicated to Uruguay:
 
-| | Before (Pampa Collection 2) | Now (Uruguay Collection 3) |
-| --- | --- | --- |
-| Asset | `projects/MapBiomas_Pampa/public/collection2/mapbiomas_pampa_collection2_integration_v1` | `projects/mapbiomas-public/assets/uruguay/lulc/collection3/mapbiomas_uruguay_collection3_coverage_v1` |
-| Period | 2001–2021 (21 years) | **1985–2024** (40 years) |
-| Plantation class | `9` — Forest plantation | `79` Pinus · `80` Eucalyptus · `83` Other forestry uses |
-| Maximum measurable age | 20 years | **39 years** |
+| | |
+| --- | --- |
+| Asset | `projects/mapbiomas-public/assets/uruguay/lulc/collection3/mapbiomas_uruguay_collection3_coverage_v1` |
+| Period | **1985–2024** (40 annual bands) |
+| Resolution | 30 m |
+| Plantation classes | `79` Pinus · `80` Eucalyptus · `83` Other forestry uses |
+| Maximum measurable age | **39 years** |
 
-> **Important.** Class `9` no longer exists in Collection 3 — it was split by genus. Any script
-> still filtering `.eq(9)` against this collection returns an empty image.
-
-The Pampa Collection 2 version of the script remains available in the git history of this
-repository.
+> **Note.** Collection 3 has no single "silviculture" class: plantations are mapped by genus, so
+> the three codes above are what this script targets.
 
 ### Collection 3 legend
 
@@ -206,8 +203,9 @@ If you use this script or its products, please cite both the original method and
 
 **This adaptation**
 
-> Santarosa, L.V. *Age of Silviculture in Uruguay* (2026) — Google Earth Engine script adapted
-> from Silva Junior et al. (2020) for MapBiomas Uruguay Collection 3.
+> Santarosa, L.V. (2026). *Age of Silviculture in Uruguay* — Google Earth Engine script adapted
+> from Silva Junior et al. (2020) for MapBiomas Uruguay Collection 3. Laboratorio de Recursos
+> Hídricos y Geotecnologías, Escuela de Agronomía, Pontificia Universidad Católica de Valparaíso.
 > https://github.com/lvsantarosa/Age-of-Silviculture-Uruguay
 
 **Data**
@@ -230,5 +228,8 @@ If you use this script or its products, please cite both the original method and
 
 ## Author
 
-**Lucas Vituri Santarosa** — São Paulo State University (UNESP)
-📧 lucas.santarosa@unesp.br
+**Lucas Vituri Santarosa**
+Laboratorio de Recursos Hídricos y Geotecnologías (LRHG)
+Escuela de Agronomía · Facultad de Ciencias Agronómicas y de los Alimentos
+Pontificia Universidad Católica de Valparaíso (PUCV)
+📧 lucas.vituri@pucv.cl

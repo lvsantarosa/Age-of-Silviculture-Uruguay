@@ -10,8 +10,11 @@ date-released: '2026-10-16'
 authors:
   - given-names: Lucas
     family-names: Vituri Santarosa
-    email: lucas.santarosa@unesp.br
-    affiliation: Sao Paulo State University (UNESP)
+    email: lucas.vituri@pucv.cl
+    affiliation: >-
+      Laboratorio de Recursos Hidricos y Geotecnologias (LRHG),
+      Escuela de Agronomia, Pontificia Universidad Catolica de
+      Valparaiso (PUCV)
 abstract: >-
   Google Earth Engine script that maps the annual increment, extent,
   loss and age of silviculture (forest plantations) in Uruguay between
@@ -25,7 +28,6 @@ keywords:
   - Uruguay
   - Pinus
   - Eucalyptus
-  - Pampa
   - MapBiomas Uruguay
   - Google Earth Engine
   - remote sensing
